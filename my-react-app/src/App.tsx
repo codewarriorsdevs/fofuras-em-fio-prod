@@ -1,15 +1,3 @@
-import { Header } from "./components/header/Header"
+import { AppRoutes } from "./routes/routes"
 
-
-function App() {
-
-
-  return (
-    <>
-      <Header/>
-
-    </>
-  )
-}
-
-export default App
+export const App: React.FC = () => { return <AppRoutes/> }
