@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Import components for routing
-import Home from '../components/home/Home';
+import Home from '../pages/home/Home';
 import Header from '../components/header/Header';
 
 // Define route components

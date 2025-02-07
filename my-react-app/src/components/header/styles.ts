@@ -101,8 +101,8 @@ export const StyledSearchInput = styled.input`
   height: 48px;
   padding: 0 1rem 0 3rem;
   border-radius: 24px;
-  background: white;
-  color: #23395B;
+  background: ${props => props.theme.colors.searchBg};
+  color: ${props => props.theme.colors.text};
   border: 2px solid #E2E8F0;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
@@ -222,8 +222,8 @@ export const MobileMenu = styled.nav<MobileMenuProps>`
   position: absolute;
   top: 0;
   left: 0;
-  width: 280px;
-  height: 100vw;
+  width: 245px;
+  height: 220vw;
   background: rgba(35, 57, 91, 1);
   transform: ${({ $isOpen }) => $isOpen ? 'translateX(0)' : 'translateX(-100%)'};
   transition: transform 0.3s ease-in-out;

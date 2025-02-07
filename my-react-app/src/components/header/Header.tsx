@@ -1,4 +1,4 @@
-import React, { useState, useCallback, memo } from 'react';
+import React, { useState, useCallback, useRef, useEffect, memo } from 'react';
 import Logo from '../../assets/Logo.svg';
 import { useLocation } from 'react-router-dom';
 import {
@@ -37,10 +37,30 @@ const Header = memo(() => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [cartItems] = useState(3);
     const location = useLocation();
+    const menuRef = useRef<HTMLDivElement>(null); // Referência para o menu
 
     const toggleMenu = useCallback(() => {
         setIsMenuOpen(prev => !prev);
     }, []);
+
+    // Fecha o menu ao clicar fora dele
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+                setIsMenuOpen(false);
+            }
+        };
+
+        if (isMenuOpen) {
+            document.addEventListener("mousedown", handleClickOutside);
+        } else {
+            document.removeEventListener("mousedown", handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [isMenuOpen]);
 
     const menuItems: MenuItem[] = [
         { title: "Descubra nossas Peças", isTitle: true },
@@ -95,7 +115,7 @@ const Header = memo(() => {
                     {/* Links de navegação desktop abaixo do input */}
                     <DesktopNavLinks>
                         {["Início", "Produtos", "Contato", "Sobre Nós"].map((item) => {
-                            const path = `/${item.toLowerCase().replace(' ', '-')}`;
+                            const path = item === "Início" ? "/" : `/${item.toLowerCase().replace(' ', '-')}`;
                             return (
                                 <DesktopNavLink
                                     key={item}
@@ -118,7 +138,7 @@ const Header = memo(() => {
             </HeaderContent>
 
             {/* Mobile Menu */}
-            <MobileMenu $isOpen={isMenuOpen}>
+            <MobileMenu ref={menuRef} $isOpen={isMenuOpen}>
                 <MenuHeader>
                     <MenuButton onClick={toggleMenu}>
                         <CloseIcon size={24} />
