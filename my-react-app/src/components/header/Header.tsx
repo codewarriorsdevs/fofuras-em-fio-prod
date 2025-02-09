@@ -26,6 +26,7 @@ import {
     DesktopNavLink
 } from './styles';
 
+
 interface MenuItem {
     title?: string;
     path?: string;
