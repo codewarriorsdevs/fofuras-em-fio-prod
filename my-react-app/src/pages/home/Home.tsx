@@ -1,13 +1,15 @@
-import LogoHome from '../../assets/LogoHome.svg';
+import HomeImage from "../../assets/LogoHome.svg";
+
 import { HomeContainer } from './styles';
 
-function Home() {
-    return (
-        <HomeContainer>
-            <img src={LogoHome} alt="Fofuras-em-Fios-Banner" />
-            <h1>Home</h1>
-        </HomeContainer>
-    );
-};
+export const Home: React.FC = () => {
 
-export default Home;
+    return (
+        
+        <HomeContainer>
+            <figure>
+                <img src={HomeImage} alt="HomeImage" />
+            </figure>  
+        </HomeContainer>
+    )
+}

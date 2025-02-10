@@ -1,27 +1,22 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-export const HomeContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 0; /* Removendo espaços extras */
-    margin: 0;
-    
-    img {
-        max-width: 1280px;
-        height: auto;
+export const HomeContainer = styled.section`
 
-        @media (max-width: 768px) {
-            max-width: 495px;
-            height: 200px;
+    background-color: violet;
+    width: 100vw;
+    height: 595px;
+
+    > figure {
+
+        height: 100%;
+
+        > img {
+
+            width: 100vw;
+            height: 100%;
+            object-fit: cover;
         }
     }
 
-    h1 {
-        //font-size: 28px;
-        //margin-top: 20px;
-        text-align: center;
-    }
+    @media screen and ( max-width: 1000px ) { height: 230px }
 `;
