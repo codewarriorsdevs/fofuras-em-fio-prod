@@ -108,7 +108,7 @@ const Header = memo(() => {
                         </SearchContainer>
 
                         <CartContainer>
-                            <CartIcon size={24} />
+                            <CartIcon size={30} />
                             {cartItems > 0 && <CartBadge>{cartItems}</CartBadge>}
                         </CartContainer>
                     </DesktopTopRow>
