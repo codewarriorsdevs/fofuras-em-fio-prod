@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Import components for routing
-import {Home} from '../pages/home/Home';
+import { Home } from '../pages/home/Home';
 import Header from '../components/header/Header';
-import {NotFoundPage} from "../pages/NotFoundPage"
+import { NotFoundPage } from '../pages/NotFoundPage';
 
 // Define route components
 const AppRoutes: React.FC = () => {
@@ -20,10 +20,16 @@ const AppRoutes: React.FC = () => {
         <Route path="/sapatinhos" element={<div>Sapatinhos Page</div>} />
         <Route path="/vestidos" element={<div>Vestidos Page</div>} />
         <Route path="/dicas" element={<div>Dicas e Cuidados Page</div>} />
-        
-        {/* 404 Not Found Route */}
-        <Route path="*" element= { <NotFoundPage /> } />
-        
+
+        {/* Rotas das Categorias */}
+        <Route path="/sapatos" element={<div>Sapatos</div> } />
+        <Route path="/vestidos" element={<div>Vestidos</div>} />
+        <Route path="/shorts" element={<div>Shorts</div> } />
+        <Route path="/sandalias" element={<div>Sandálias</div>} />
+        <Route path="/conjuntos" element={<div>Conjuntos</div>} />
+
+         {/* 404 Not Found Route */}
+         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
   );

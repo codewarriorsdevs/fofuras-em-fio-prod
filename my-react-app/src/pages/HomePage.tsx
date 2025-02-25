@@ -1,6 +1,10 @@
-import { Home } from "../pages/home/Home"
+import { Home } from '../pages/home/Home';
 
-export const HomePage: React.FC = () => { 
-    
-    return <Home/> 
+export const HomePage: React.FC = () => {
+
+    return (
+        <>
+            <Home />
+        </>
+    )
 }

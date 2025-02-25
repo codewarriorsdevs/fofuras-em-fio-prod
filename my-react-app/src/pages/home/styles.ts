@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const HomeContainer = styled.section`
 
     background-color: violet;
-    width: 100vw;
+    width: 100%;
     height: 595px;
 
     > figure {
