@@ -4,6 +4,7 @@ import { ProductCard } from "../../components/productCard/ProductCard";
 import { HomeContainer } from './styles';
 import { ProductCardList } from './../../components/productCardList/ProductCardList';
 
+
 export const Home: React.FC = () => {
 
     return (
@@ -37,8 +38,6 @@ export const Home: React.FC = () => {
                 <ProductCard nameProduct="Sadália" priceProduct="13.00"/>
 
             </ProductCardList>
-
-
         </HomeContainer>
     )
 }

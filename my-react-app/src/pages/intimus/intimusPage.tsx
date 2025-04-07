@@ -1,0 +1,62 @@
+import { Button } from '../../components/button/Button';
+import { IntimusPageListContainer } from './styles';
+import { ProductCardList } from '../intimusPageList/IntimusPageList';
+
+// Importações de imagens corretas
+import VesTIdos from '../../assets/vestidos.svg';
+import ConJUnTos from '../../assets/conjuntos.svg';
+import ShoRtS from '../../assets/shorts.svg';
+
+interface IntimusCardProps {
+  id: string;
+  namProducts: string;
+  priceProducts: string;
+  imageUrl: string;
+}
+
+export const ProductCard = ({ 
+  namProducts, 
+  priceProducts, 
+  imageUrl 
+}: IntimusCardProps) => {
+  return (
+    <IntimusPageListContainer>
+      <figure>
+        {/* Usando imagem dinâmica do prop */}
+        <img src={imageUrl} alt={`Produto ${namProducts}`} />
+      </figure>
+      
+      <div className="product-info">
+        <h2>{namProducts}</h2>
+        <p>R$ {priceProducts}</p>
+        <Button textButton={"Comprar"} />
+      </div>
+    </IntimusPageListContainer>
+  );
+};
+
+export const IntimusPages = () => {
+  // Dados corretos com imagens diferentes
+  const products = [
+    { id: '1', namProducts: "Vestidos", priceProducts: "32.99", imageUrl: VesTIdos },
+    { id: '2', namProducts: "Conjuntos", priceProducts: "37.99", imageUrl: ConJUnTos },
+    { id: '3', namProducts: "Shorts", priceProducts: "15.99", imageUrl: ShoRtS },
+    // Adicione mais produtos conforme necessário
+  ];
+
+  return (
+    <main>
+      <ProductCardList titleSection="Roupas Íntimas">
+        {products.map((product) => (
+          <ProductCard
+            key={product.id}
+            id={product.id}
+            namProducts={product.namProducts}
+            priceProducts={product.priceProducts}
+            imageUrl={product.imageUrl}
+          />
+        ))}
+      </ProductCardList>
+    </main>
+  );
+};

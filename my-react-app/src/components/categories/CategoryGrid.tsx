@@ -28,7 +28,7 @@ const CategoryGrid = () => {
       {/* Cabeçalho com título e botão "Ver tudo" */}
       <CategoryHeader>
         <h2>Categorias</h2>
-        <SeeAllLink to="/categorias">Ver tudo →</SeeAllLink>
+        <SeeAllLink to="/produtos">Ver tudo →</SeeAllLink>
       </CategoryHeader>
 
       {/* Grid de categorias */}
