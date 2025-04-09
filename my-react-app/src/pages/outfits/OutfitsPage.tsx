@@ -1,26 +1,25 @@
 import { Button } from '../../components/button/Button';
-import { IntimusPageListContainer } from './styles';
+import { OutfitsPageListContainer } from './styles';
 import { ProductCardList } from '../intimusPageList/IntimusPageList';
 
 // Importações de imagens corretas
-import ShoRtsDuo from '../../assets/peças-1.jpg';
-import ShortPink from '../../assets/peças-2.jpg';
-import ShoRtSBlue from '../../assets/peças-3.jpg';
+import OutfitBaby from '../../assets/conjuntos.svg';
 
-interface IntimusCardProps {
+
+interface DressCardProps {
   id: string;
   namProducts: string;
   priceProducts: string;
   imageUrl: string;
 }
 
-export const ProductCard = ({ 
+export const OutfitsCard = ({ 
   namProducts, 
   priceProducts, 
   imageUrl 
-}: IntimusCardProps) => {
+}: DressCardProps) => {
   return (
-    <IntimusPageListContainer>
+    <OutfitsPageListContainer>
       <figure>
         {/* Usando imagem dinâmica do prop */}
         <img src={imageUrl} alt={`Produto ${namProducts}`} />
@@ -31,24 +30,24 @@ export const ProductCard = ({
         <p>R$ {priceProducts}</p>
         <Button textButton={"Comprar"} />
       </div>
-    </IntimusPageListContainer>
+    </OutfitsPageListContainer>
   );
 };
 
-export const IntimusPages = () => {
+export const OutfitsPage = () => {
   // Dados corretos com imagens diferentes
   const products = [
-    { id: '1', namProducts: "Cacinhas Dupla", priceProducts: "32.99", imageUrl: ShoRtsDuo },
-    { id: '2', namProducts: "Calcinha Rosa", priceProducts: "17.99", imageUrl: ShortPink },
-    { id: '3', namProducts: "Calcinha Azul", priceProducts: "16.99", imageUrl: ShoRtSBlue },
+    { id: '1', namProducts: "Conjuntinhos", priceProducts: "44.99", imageUrl: OutfitBaby },
+
+   
     // Adicione mais produtos conforme necessário
   ];
 
   return (
     <main>
-      <ProductCardList titleSection="Calcinhas">
+      <ProductCardList titleSection="Conjuntinhos">
         {products.map((product) => (
-          <ProductCard
+          <OutfitsCard
             key={product.id}
             id={product.id}
             namProducts={product.namProducts}

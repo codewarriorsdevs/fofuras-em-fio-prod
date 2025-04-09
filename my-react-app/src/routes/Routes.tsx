@@ -6,10 +6,16 @@ import { Home } from '../pages/home/Home';
 import Header from '../components/header/Header';
 import { AccessoriesPage } from '../pages/acessory/productsPage';
 import { IntimusPages  }from '../pages/intimus/intimusPage';
+import { ShoesPage } from '../pages/shoes/ShoesPage';
+import { DressPage } from '../pages/dress/DressPage';
 import { NotFoundPage } from '../pages/NotFoundPage';
 import ContactPage from '../pages/contact/contactPage';
 import Products from '../pages/products/Products';
 import AboutPage from '../pages/about/aboutPage';
+import { OutfitsPage } from '../pages/outfits/OutfitsPage';
+import BikinisPage from '../pages/bikinis/bikinisPage';
+import TipsPage from '../pages/tips/tips';
+import SandalsPage from '../pages/sandals/sandals';
 
 // Define route components
 const AppRoutes: React.FC = () => {
@@ -19,12 +25,13 @@ const AppRoutes: React.FC = () => {
       <Routes>
         {/* Rotas das Categorias */}
         <Route path="/acessorios" element={<AccessoriesPage />} />
-        <Route path="/biquinis" element={<div>Biquinis Page</div>} />
-        <Route path="/conjuntos" element={<div>Conjuntos Page</div>} />
+        <Route path="/biquinis" element={<BikinisPage />} />
+        <Route path="/sandalias" element={<SandalsPage />} />
+        <Route path="/conjuntos" element={<OutfitsPage />} />
         <Route path="/roupas-intimas" element={<IntimusPages />} />
-        <Route path="/sapatinhos" element={<div>Sapatinhos Page</div>} />
-        <Route path="/vestidos" element={<div>Vestidos Page</div>} />
-        <Route path="/dicas e cuidados" element={<div>Dicas e Cuidados</div>} />
+        <Route path="/sapatinhos" element={<ShoesPage />} />
+        <Route path="/vestidos" element={<DressPage />} />
+        <Route path="/dicas" element={<TipsPage />} />
 
 
         {/* Rotas das Página */}

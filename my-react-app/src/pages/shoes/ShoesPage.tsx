@@ -1,13 +1,14 @@
 import { Button } from '../../components/button/Button';
-import { IntimusPageListContainer } from './styles';
+import { ShoesPageListContainer } from './styles';
 import { ProductCardList } from '../intimusPageList/IntimusPageList';
 
 // Importações de imagens corretas
-import ShoRtsDuo from '../../assets/peças-1.jpg';
-import ShortPink from '../../assets/peças-2.jpg';
-import ShoRtSBlue from '../../assets/peças-3.jpg';
+import ShoEsBaby from '../../assets/imagem-sapatos1.jpg';
+import ShoEsBaby2 from '../../assets/imgs/productImage.png';
+import ShoEsBaby3 from '../../assets/sandalias.svg';
+import ShoEsBaby4 from '../../assets/sapatos.svg';
 
-interface IntimusCardProps {
+interface ShoesCardProps {
   id: string;
   namProducts: string;
   priceProducts: string;
@@ -18,9 +19,9 @@ export const ProductCard = ({
   namProducts, 
   priceProducts, 
   imageUrl 
-}: IntimusCardProps) => {
+}: ShoesCardProps) => {
   return (
-    <IntimusPageListContainer>
+    <ShoesPageListContainer>
       <figure>
         {/* Usando imagem dinâmica do prop */}
         <img src={imageUrl} alt={`Produto ${namProducts}`} />
@@ -31,22 +32,24 @@ export const ProductCard = ({
         <p>R$ {priceProducts}</p>
         <Button textButton={"Comprar"} />
       </div>
-    </IntimusPageListContainer>
+    </ShoesPageListContainer>
   );
 };
 
-export const IntimusPages = () => {
+export const ShoesPage = () => {
   // Dados corretos com imagens diferentes
   const products = [
-    { id: '1', namProducts: "Cacinhas Dupla", priceProducts: "32.99", imageUrl: ShoRtsDuo },
-    { id: '2', namProducts: "Calcinha Rosa", priceProducts: "17.99", imageUrl: ShortPink },
-    { id: '3', namProducts: "Calcinha Azul", priceProducts: "16.99", imageUrl: ShoRtSBlue },
+    { id: '1', namProducts: "Sandália verde", priceProducts: "24.99", imageUrl: ShoEsBaby },
+    { id: '2', namProducts: "Chinelinho", priceProducts: "19.99", imageUrl: ShoEsBaby2 },
+    { id: '3', namProducts: "Sandália vermelha", priceProducts: "21.99", imageUrl: ShoEsBaby3 },
+    { id: '4', namProducts: "Ténis Feminino", priceProducts: "64.99", imageUrl: ShoEsBaby4 },
+   
     // Adicione mais produtos conforme necessário
   ];
 
   return (
     <main>
-      <ProductCardList titleSection="Calcinhas">
+      <ProductCardList titleSection="Sapatinhos">
         {products.map((product) => (
           <ProductCard
             key={product.id}
