@@ -19,6 +19,7 @@ const ButtonContainer = styled.button`
 
     border: none;
     border-radius: 20px;
+    
 
     cursor: pointer;
 `;

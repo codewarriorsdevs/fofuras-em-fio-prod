@@ -15,9 +15,9 @@ import sandalias from '../../assets/sandalias.svg';
 import conjuntos from '../../assets/conjuntos.svg';
 
 const categories = [
-  { name: 'Sapatos', path: '/sapatos', image: sapatos },
+  { name: 'Sapatos', path: '/sapatinhos', image: sapatos },
   { name: 'Vestidos', path: '/vestidos', image: vestidos },
-  { name: 'Shorts', path: '/shorts', image: shorts },
+  { name: 'Shorts', path: '/roupas-intimas', image: shorts },
   { name: 'Sandálias', path: '/sandalias', image: sandalias },
   { name: 'Conjuntos', path: '/conjuntos', image: conjuntos },
 ];
@@ -28,7 +28,7 @@ const CategoryGrid = () => {
       {/* Cabeçalho com título e botão "Ver tudo" */}
       <CategoryHeader>
         <h2>Categorias</h2>
-        <SeeAllLink to="/categorias">Ver tudo →</SeeAllLink>
+        <SeeAllLink to="/produtos">Ver tudo →</SeeAllLink>
       </CategoryHeader>
 
       {/* Grid de categorias */}
