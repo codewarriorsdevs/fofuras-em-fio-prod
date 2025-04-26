@@ -5,6 +5,8 @@ export const ProductCardContainer = styled.div`
     min-width: 18rem;
     min-height: 18rem;
 
+    max-width: 50%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,10 +23,10 @@ export const ProductCardContainer = styled.div`
 
         > img {
 
-            max-height: 12rem;
+            max-height: 15rem;
             border-radius: inherit;
             object-fit: cover;
-            width: inherit;
+            width: inherit;            
         }
     }
 
