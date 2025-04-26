@@ -1,12 +1,15 @@
-import { Button } from '../../components/button/Button';
-import { ShoesPageListContainer } from './styles';
-import { ProductCardList } from '../intimusPageList/IntimusPageList';
+import { Button } from "../../components/button/Button";
+import { ShoesPageListContainer } from "./styles";
+import { ProductCardList } from "../intimusPageList/IntimusPageList";
 
 // Importações de imagens corretas
-import ShoEsBaby from '../../assets/imagem-sapatos1.jpg';
-import ShoEsBaby2 from '../../assets/imgs/productImage.png';
-import ShoEsBaby3 from '../../assets/sandalias.svg';
-import ShoEsBaby4 from '../../assets/sapatos.svg';
+import ShoEsBaby from "../../assets/imagem-sapatos1.jpg";
+import ShoEsBaby2 from "../../assets/imgs/productImage.png";
+import ShoEsBaby3 from "../../assets/sandalias.svg";
+import ShoEsBaby4 from "../../assets/sapatos.svg";
+
+import Botinha2 from "../../assets/imgs/botinha2.jpg";
+import Botinha3 from "../../assets/imgs/botinha3.jpg";
 
 interface ShoesCardProps {
   id: string;
@@ -15,10 +18,10 @@ interface ShoesCardProps {
   imageUrl: string;
 }
 
-export const ProductCard = ({ 
-  namProducts, 
-  priceProducts, 
-  imageUrl 
+export const ProductCard = ({
+  namProducts,
+  priceProducts,
+  imageUrl,
 }: ShoesCardProps) => {
   return (
     <ShoesPageListContainer>
@@ -26,7 +29,7 @@ export const ProductCard = ({
         {/* Usando imagem dinâmica do prop */}
         <img src={imageUrl} alt={`Produto ${namProducts}`} />
       </figure>
-      
+
       <div className="product-info">
         <h2>{namProducts}</h2>
         <p>R$ {priceProducts}</p>
@@ -39,11 +42,43 @@ export const ProductCard = ({
 export const ShoesPage = () => {
   // Dados corretos com imagens diferentes
   const products = [
-    { id: '1', namProducts: "Sandália verde", priceProducts: "24.99", imageUrl: ShoEsBaby },
-    { id: '2', namProducts: "Chinelinho", priceProducts: "19.99", imageUrl: ShoEsBaby2 },
-    { id: '3', namProducts: "Sandália vermelha", priceProducts: "21.99", imageUrl: ShoEsBaby3 },
-    { id: '4', namProducts: "Ténis Feminino", priceProducts: "64.99", imageUrl: ShoEsBaby4 },
-   
+    {
+      id: "1",
+      namProducts: "Sandália verde",
+      priceProducts: "24.99",
+      imageUrl: ShoEsBaby,
+    },
+    {
+      id: "2",
+      namProducts: "Chinelinho",
+      priceProducts: "19.99",
+      imageUrl: ShoEsBaby2,
+    },
+    {
+      id: "3",
+      namProducts: "Sandália vermelha",
+      priceProducts: "21.99",
+      imageUrl: ShoEsBaby3,
+    },
+    {
+      id: "4",
+      namProducts: "Ténis Feminino",
+      priceProducts: "64.99",
+      imageUrl: ShoEsBaby4,
+    },
+    {
+      id: "5",
+      namProducts: "Botinha",
+      priceProducts: "14.99",
+      imageUrl: Botinha2,
+    },
+    {
+      id: "6",
+      namProducts: "Botinha",
+      priceProducts: "14.99",
+      imageUrl: Botinha3,
+    },
+
     // Adicione mais produtos conforme necessário
   ];
 

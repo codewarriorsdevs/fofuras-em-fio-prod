@@ -1,21 +1,22 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Import components for routing
-import { Home } from '../pages/home/Home';
-import Header from '../components/header/Header';
-import { AccessoriesPage } from '../pages/acessory/productsPage';
-import { IntimusPages  }from '../pages/intimus/intimusPage';
-import { ShoesPage } from '../pages/shoes/ShoesPage';
-import { DressPage } from '../pages/dress/DressPage';
-import { NotFoundPage } from '../pages/NotFoundPage';
-import ContactPage from '../pages/contact/contactPage';
-import Products from '../pages/products/Products';
-import AboutPage from '../pages/about/aboutPage';
-import { OutfitsPage } from '../pages/outfits/OutfitsPage';
-import BikinisPage from '../pages/bikinis/bikinisPage';
-import TipsPage from '../pages/tips/tips';
-import SandalsPage from '../pages/sandals/sandals';
+
+import { Home } from "../pages/home/Home";
+import Header from "../components/header/Header";
+import { AccessoriesPage } from "../pages/acessory/productsPage";
+import { IntimusPages } from "../pages/intimus/intimusPage";
+import { ShoesPage } from "../pages/shoes/ShoesPage";
+import { DressPage } from "../pages/dress/DressPage";
+import { NotFoundPage } from "../pages/NotFoundPage";
+import ContactPage from "../pages/contact/contactPage";
+import Products from "../pages/products/Products";
+import AboutPage from "../pages/about/aboutPage";
+import { OutfitsPage } from "../pages/outfits/OutfitsPage";
+import BikinisPage from "../pages/bikinis/bikinisPage";
+import TipsPage from "../pages/tips/tips";
+import SandalsPage from "../pages/sandals/sandals";
 
 // Define route components
 const AppRoutes: React.FC = () => {
@@ -29,10 +30,9 @@ const AppRoutes: React.FC = () => {
         <Route path="/sandalias" element={<SandalsPage />} />
         <Route path="/conjuntos" element={<OutfitsPage />} />
         <Route path="/roupas-intimas" element={<IntimusPages />} />
-        <Route path="/sapatinhos" element={<ShoesPage />} />
+        <Route path="/botinhas" element={<ShoesPage />} />
         <Route path="/vestidos" element={<DressPage />} />
         <Route path="/dicas" element={<TipsPage />} />
-
 
         {/* Rotas das Página */}
         <Route path="/" element={<Home />} />

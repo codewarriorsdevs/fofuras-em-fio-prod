@@ -1,7 +1,19 @@
-export default function BikinisPage() {
+import { ProductCardList } from "../../components/productCardList/ProductCardList";
+
+import { ProductCard } from "../../components/productCard/ProductCard";
+
+import Biquini from "./../../assets/imgs/biquini.jpg";
+
+const BiquinisPage = () => {
   return (
-    <div>
-      <h1>Biquínis Page ok</h1>
-    </div>
+    <ProductCardList titleSection="Biquinis">
+      <ProductCard
+        nameProduct="Biquini"
+        priceProduct="13.00"
+        productImage={Biquini}
+      />
+    </ProductCardList>
   );
-}
+};
+
+export default BiquinisPage;

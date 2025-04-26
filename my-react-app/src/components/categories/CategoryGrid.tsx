@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import {
   GridContainer,
   CategoryItem,
@@ -6,20 +6,20 @@ import {
   CategoryName,
   SeeAllLink,
   CategoryHeader,
-} from './styles';
+} from "./styles";
 
-import sapatos from '../../assets/sapatos.svg';
-import vestidos from '../../assets/vestidos.svg';
-import shorts from '../../assets/shorts.svg';
-import sandalias from '../../assets/sandalias.svg';
-import conjuntos from '../../assets/conjuntos.svg';
+import sapatos from "../../assets/sapatos.svg";
+import vestidos from "../../assets/vestidos.svg";
+import shorts from "../../assets/shorts.svg";
+import sandalias from "../../assets/sandalias.svg";
+import conjuntos from "../../assets/conjuntos.svg";
 
 const categories = [
-  { name: 'Sapatos', path: '/sapatinhos', image: sapatos },
-  { name: 'Vestidos', path: '/vestidos', image: vestidos },
-  { name: 'Shorts', path: '/roupas-intimas', image: shorts },
-  { name: 'Sandálias', path: '/sandalias', image: sandalias },
-  { name: 'Conjuntos', path: '/conjuntos', image: conjuntos },
+  { name: "Sapatos", path: "/sapatinhos", image: sapatos },
+  { name: "Vestidos", path: "/vestidos", image: vestidos },
+  { name: "Shorts", path: "/roupas-intimas", image: shorts },
+  { name: "Sandálias", path: "/sandalias", image: sandalias },
+  { name: "Conjuntos", path: "/conjuntos", image: conjuntos },
 ];
 
 const CategoryGrid = () => {
@@ -28,6 +28,7 @@ const CategoryGrid = () => {
       {/* Cabeçalho com título e botão "Ver tudo" */}
       <CategoryHeader>
         <h2>Categorias</h2>
+
         <SeeAllLink to="/produtos">Ver tudo →</SeeAllLink>
       </CategoryHeader>
 
