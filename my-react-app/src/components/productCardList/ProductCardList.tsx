@@ -19,8 +19,9 @@ const ProductCardListContainer = styled.div`
 
         > h1 {
                 
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 700;
+            color: ${({ theme }) => theme.colors.primary};
 
             display: flex;
             flex-wrap: nowrap;

@@ -2,12 +2,21 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Import components for routing
+
 import { Home } from "../pages/home/Home";
 import Header from "../components/header/Header";
+import { AccessoriesPage } from "../pages/acessory/productsPage";
+import { IntimusPages } from "../pages/intimus/intimusPage";
+import { ShoesPage } from "../pages/shoes/ShoesPage";
+import { DressPage } from "../pages/dress/DressPage";
 import { NotFoundPage } from "../pages/NotFoundPage";
-import { AllStartPage } from "../pages/AllStartPage";
-import { BotinhasPage } from "../pages/BotinhasPage";
-import { BiquinisPage } from "../pages/BiquinisPage";
+import ContactPage from "../pages/contact/contactPage";
+import Products from "../pages/products/Products";
+import AboutPage from "../pages/about/aboutPage";
+import { OutfitsPage } from "../pages/outfits/OutfitsPage";
+import BikinisPage from "../pages/bikinis/bikinisPage";
+import TipsPage from "../pages/tips/tips";
+import SandalsPage from "../pages/sandals/sandals";
 
 // Define route components
 const AppRoutes: React.FC = () => {
@@ -15,26 +24,21 @@ const AppRoutes: React.FC = () => {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-
-        <Route path="/all-start" element={<AllStartPage />} />
-        <Route path="/biquinis" element={<BiquinisPage />} />
-        <Route path="/botinhas" element={<BotinhasPage />} />
-
-        <Route
-          path="/roupas-intimas"
-          element={<div>Roupas Íntimas Page</div>}
-        />
-        <Route path="/sapatinhos" element={<div>Sapatinhos Page</div>} />
-        <Route path="/vestidos" element={<div>Vestidos Page</div>} />
-        <Route path="/dicas" element={<div>Dicas e Cuidados Page</div>} />
-
         {/* Rotas das Categorias */}
-        <Route path="/sapatos" element={<div>Sapatos</div>} />
-        <Route path="/vestidos" element={<div>Vestidos</div>} />
-        <Route path="/shorts" element={<div>Shorts</div>} />
-        <Route path="/sandalias" element={<div>Sandálias</div>} />
-        <Route path="/conjuntos" element={<div>Conjuntos</div>} />
+        <Route path="/acessorios" element={<AccessoriesPage />} />
+        <Route path="/biquinis" element={<BikinisPage />} />
+        <Route path="/sandalias" element={<SandalsPage />} />
+        <Route path="/conjuntos" element={<OutfitsPage />} />
+        <Route path="/roupas-intimas" element={<IntimusPages />} />
+        <Route path="/botinhas" element={<ShoesPage />} />
+        <Route path="/vestidos" element={<DressPage />} />
+        <Route path="/dicas" element={<TipsPage />} />
+
+        {/* Rotas das Página */}
+        <Route path="/" element={<Home />} />
+        <Route path="/produtos" element={<Products />} />
+        <Route path="/contato" element={<ContactPage />} />
+        <Route path="/sobre-nós" element={<AboutPage />} />
 
         {/* 404 Not Found Route */}
         <Route path="*" element={<NotFoundPage />} />

@@ -1,10 +1,14 @@
 import AppRoutes from "../src/routes/Routes"
+import Footer from "./components/footer/Footer"
 
 
 
 function App() {
   return (
-    <AppRoutes />
+    <div>
+      <AppRoutes />
+      <Footer />
+    </div>
   )
 }
 

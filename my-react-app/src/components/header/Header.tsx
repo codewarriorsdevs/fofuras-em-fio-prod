@@ -65,7 +65,7 @@ const Header = memo(() => {
   const menuItems: MenuItem[] = [
     { title: "Descubra nossas Peças", isTitle: true },
     { isDivider: true },
-    { title: "All Start", path: "/all-start" },
+    { title: "All Start", path: "/produtos" },
     { title: "Biquinis", path: "/biquinis" },
     { title: "Botinhas", path: "/botinhas" },
     { title: "Roupas íntimas", path: "/roupas-intimas" },
